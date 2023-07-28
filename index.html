@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Especial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Para Minha Pretinha</h1>
+    <div class="photo-gallery">
+        <img src="foto1.jpeg" alt="Foto 1">
+        <img src="foto2.jpeg" alt="Foto 2">
+        <img src="foto3.jpeg" alt="Foto 3">
+    </div>
+    <p>Oii Mozão :) </p>
+    <p>To aqui pra te agradecer por estar 8 meses ao meu lado <3. </p>
+    <p>Eu sei que esse semestre foi bem difícil pra gente, mas eu agradeço muito por ter minha namorada que sempre está ao meu lado me dando todo o suporte possível. Obrigado por isso meu amo, TE AMO MUITO!!!</p>
+    <p>Eu sempre me recordo do nosso final de semana em Campinas, vou um sonho se realizando, acho que foi o primeiro final de semana que, na minha cabeça, durou apenas 1 hora.</p>
+    <p>Já estou ansioso para que isso aconteça novamente, mia linda.</p>
+    <p>Queria dizer que gosto muito do seu rostinho lindo, realmente espero que a gnt passe mt tempo junto mozão!</p>
+    <p>Espero que goste dessa lembrancinha. </p>
+    <p>Te amo muito!</p>
+    <p>Muitos e muitos beijos.</p>
+  </div>
+  <button id="playButton">Iniciar Música</button>
+  <button id="pauseButton">Pausar Música</button>
+  <audio id="backgroundAudio" src="audio.mp3"></audio>
+</body>
+</html>
+
+<script>
+  const audio = document.getElementById("backgroundAudio");
+  const playButton = document.getElementById("playButton");
+  const pauseButton = document.getElementById("pauseButton");
+
+  playButton.addEventListener("click", function() {
+    audio.play();
+    playButton.disabled = true; // Desabilita o botão de iniciar enquanto a música estiver tocando
+    pauseButton.disabled = false; // Habilita o botão de pausar
+  });
+
+  pauseButton.addEventListener("click", function() {
+    audio.pause();
+    pauseButton.disabled = true; // Desabilita o botão de pausar enquanto a música estiver pausada
+    playButton.disabled = false; // Habilita o botão de iniciar
+  });
+</script>
